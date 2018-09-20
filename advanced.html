@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Hello, even more world!</title>
+        <!-- here is some css inside the <style> tag -->
+        <style>
+            body {
+                background-color: rgb(24, 16, 129);
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Hi!</h1>
+        <p>This is my page! Click <button id="bob">here</button> to change colors!</p>
+    </body>
+    <!-- here is some javascript inside the <script> tag -->
+    <script>
+        const button = document.querySelector('#bob');
+        button.addEventListener('click', () => {
+            document.body.style.backgroundColor = getRandomColor();
+        });
+
+        function getRandomColor() {
+            const red = Math.random() * 255;
+            const blue = Math.random() * 255;
+            const green = Math.random() * 255;
+            return 'rgb(' + red + ',' + blue + ',' + green + ')';
+        }
+    </script>
+</html>
